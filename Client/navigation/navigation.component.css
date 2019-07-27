@@ -1,0 +1,64 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+body {
+  overflow-x: hidden;
+}
+
+#wrapper{
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: 0;
+  width: 18%;
+  font-size: 18px;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 22px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+#greeter{
+  background: linear-gradient(to left, #8e9eab, #eef2f3);
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-item:hover{
+
+}
+.dropdown-menu{
+  padding:0;
+  margin:0;
+}
+.sidebar-heading{
+}
+.list-group-item:hover{
+}
+.navbar{
+  height: 12%;
+  padding: 0;
+  margin: 0;
+  border-bottom: darkgray;
+  background-color: white;
+}
+h1{
+  margin-left: 3%;
+}
+/*Some responsive features*/
+@media screen and (max-width: 700px) {
+  #sidebar-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  #sidebar-wrapper a {float: left;}
+  #page-content-wrapper {margin-left: 0;}
+}

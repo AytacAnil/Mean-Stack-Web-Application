@@ -1,0 +1,22 @@
+<!-- Table starts here -->
+<div class="border-bottom table-wrapper-scroll-y my-custom-scrollbar">
+  <table class="table table-striped table-bordered table-hover table-responsive-md"
+         id="inboxTable" matSort (matSortChange)="sortData($event)">
+    <thead>
+      <tr>
+        <th mat-sort-header="date">Date</th>
+        <th *ngIf="inboxing" mat-sort-header="from">From</th>
+        <th *ngIf="!inboxing" mat-sort-header="to">To</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messageList()">
+        <td>{{message.date | date:'medium'}}</td>
+        <td *ngIf="inboxing">{{message.from}}</td>
+        <td *ngIf="!inboxing">{{message.to}}</td>
+        <td>{{message.messageText}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

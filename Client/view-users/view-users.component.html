@@ -1,0 +1,55 @@
+<!-- Table starts here -->
+<input class="form-control" type="text" placeholder="Search" id="search" [(ngModel)]="filter">
+<div class="border-bottom  table-wrapper-scroll-y my-custom-scrollbar" (click)="feedback = '';">
+  <table class="table table-striped table-bordered table-hover table-responsive-md" matSort (matSortChange)="sortData($event)">
+    <thead class="thead-dark">
+    <tr>
+      <th mat-sort-header="username">Username</th>
+      <th mat-sort-header="name">Name</th>
+      <th mat-sort-header="surname">Surname</th>
+      <th mat-sort-header="gender">Gender</th>
+      <th mat-sort-header="birthday">Birthday</th>
+      <th mat-sort-header="mail">Mail</th>
+      <th class="text-center"> Action </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users | filter: filter;">
+      <td>{{user.username}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.surname}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.birthday}}</td>
+      <td>{{user.mail}}</td>
+      <td class="text-center">
+        <div class="btn-group btn-group-justified">
+        <button class='btn btn-danger' (click)="deleteUser(user); $event.stopPropagation();">Delete</button>
+        <button class='btn btn-info' (click)="updateUser(user);">Update</button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div id="modal" class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">User form</h4>
+      </div>
+      <div class="modal-body mx-3">
+        <app-add-user (addUser)="onAddUser($event)"> </app-add-user>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <a id="modalTrigger" (click)="this.addUserComp.switchToCreate()"
+     class="btn btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">
+    <i class="fas fa-user-plus"></i><b>&nbsp;New User</b></a>
+</div>
+
+<p>{{feedback}}</p>

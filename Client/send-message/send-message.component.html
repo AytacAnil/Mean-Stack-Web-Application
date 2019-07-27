@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form accept-charset="UTF-8" #myForm (ngSubmit)="sendMessage(); this.myForm.reset()"  method="POST">
+            <mat-label>Send to</mat-label>
+            <input class="form-control" type="text" placeholder="Username" aria-label="Number" matInput [formControl]="myControl"
+                   [matAutocomplete]="auto" [(ngModel)]="newMessage.to" (keypress)="searchUsers()" >
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let user of usernameList" [value]='user["username"]'>
+                {{user["username"]}}
+              </mat-option>
+            </mat-autocomplete>
+            <textarea
+              class="form-control counted" [(ngModel)]="newMessage.messageText" (keypress)="this.feedback = ''"
+              name="messageText" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
+            </textarea>
+            <button class="btn btn-primary" type="submit">Send</button>
+            <p>{{feedback}}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,43 @@
+<!-- Default form register -->
+<form class="text-center p-5" (ngSubmit)="onSubmit();" (keypress)="this.feedback =''" ngNativeValidate>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <!-- Username -->
+      <input type="text" class="form-control" [(ngModel)]="newUser.username"
+             [disabled]="updating" name="username" placeholder="Username" required>
+    </div>
+    <div class="col">
+      <!-- Password -->
+      <input type="text"  class="form-control" [(ngModel)]="newUser.password"
+             placeholder="Password" name="password" required>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <!-- First name -->
+      <input type="text"  class="form-control" [(ngModel)]="newUser.name"
+             placeholder="First Name" name="name" required>
+    </div>
+    <div class="col">
+      <!-- Last name -->
+      <input type="text"  class="form-control" [(ngModel)]="newUser.surname"
+             placeholder="Last Name" name="surname" required>
+    </div>
+  </div>
+
+  <input type="email" class="form-control mb-4" [(ngModel)]="newUser.mail"
+         placeholder="E-Mail" name="mail" required>
+
+  <input type="text" class="form-control mb-4" [(ngModel)]="newUser.gender"
+         placeholder="Gender" name="gender" required>
+
+  <input type="date" class="form-control mb-4" [(ngModel)]="newUser.birthday"
+         placeholder="Birthday" name="birthday" required>
+
+  <button *ngIf="!updating" type="submit" class="btn btn-primary">Create</button>
+  <button *ngIf="updating" type="submit" class="btn btn-primary">Update</button>
+  <p>{{feedback}}</p>
+</form>
+<!-- Default form register -->

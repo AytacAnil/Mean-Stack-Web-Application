@@ -1,0 +1,47 @@
+<body>
+<nav class="navbar navbar-expand-lg border-bottom shadow-sm">
+  <h1>
+      <i class="fas fa-feather"></i>
+      <img alt="logo" src="../../assets/imail.png">
+  </h1>
+</nav>
+
+<!-- #sidebar-wrapper -->
+<div class="d-flex" id="wrapper">
+  <div class="border-right shadow-sm" id="sidebar-wrapper">
+    <div class="sidebar-heading text-center" id="greeter"> </div>
+    <div class="list-group list-group-flush">
+      <div *ngIf="mockStatus" class="dropdown dropright">
+        <a class="list-group-item list-group-item-action  dropdown-toggle" data-toggle="dropdown">
+          <i class="fas fa-users"></i>&nbsp;Users</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="./Users">User List</a>
+          <a class="dropdown-item" routerLink="./Sessions">User Logs</a>
+        </div>
+      </div>
+      <div class="dropdown dropright">
+        <a class="list-group-item list-group-item-action  dropdown-toggle" data-toggle="dropdown">
+          <i class="fas fa-mail-bulk"></i>&nbsp;&nbsp;Mails</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="./Mails">Send Message</a>
+          <a class="dropdown-item" routerLink="./Mails/inbox">Inbox</a>
+          <a class="dropdown-item" routerLink="./Mails/outbox">Outbox</a>
+        </div>
+      </div>
+      <a href="/myApp/login"
+         class="list-group-item list-group-item-action " (click)="logout()" >
+        <i class="fas fa-door-open"></i>&nbsp;Logout</a>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+    <router-outlet></router-outlet>
+
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+</body>

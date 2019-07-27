@@ -1,0 +1,25 @@
+<title>Welcome to iMail!</title>
+
+<body id="LoginForm">
+<h1>
+  <i class="fas fa-feather"></i>
+  <img src="../../assets/iMail-Login-Page.png" alt="login logo">
+</h1>
+<div class="main-div">
+<div class="container">
+  <form class="login-form " (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <i class="far fa-user fa-lg"></i>
+      <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="username" required>
+    </div>
+    <div>
+      <i class="fas fa-lock fa-lg"></i>
+      <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="password" required>
+      <br>
+    </div>
+    <button type="submit" class="btn btn-primary">login</button>
+    <div *ngIf="wrong">Wrong username or password</div>
+  </form>
+</div>
+</div>
+</body>
