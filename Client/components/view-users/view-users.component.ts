@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {UserService} from '../services/user.service';
-import {User} from '../models/User';
+import {UserService} from '../../services/user.service';
+import {User} from '../../models/User';
 import {AddUserComponent} from "../add-user/add-user.component";
 import {Router} from "@angular/router";
 import {Sort} from "@angular/material/sort"

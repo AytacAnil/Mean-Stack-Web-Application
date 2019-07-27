@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Message} from "../models/Message";
-import {MailService} from "../services/mail.service";
+import {Message} from "../../models/Message";
+import {MailService} from "../../services/mail.service";
 import {Router} from "@angular/router";
-import {UserService} from "../services/user.service";
+import {UserService} from "../../services/user.service";
 import {FormControl} from "@angular/forms";
 
 @Component({

@@ -1,6 +1,6 @@
 import {Component, OnInit, Pipe, PipeTransform} from '@angular/core';
-import { Session } from "../models/Session";
-import { UserService } from '../services/user.service';
+import { Session } from "../../models/Session";
+import { UserService } from '../../services/user.service';
 import { Router } from "@angular/router";
 import { Sort } from "@angular/material/sort"
 

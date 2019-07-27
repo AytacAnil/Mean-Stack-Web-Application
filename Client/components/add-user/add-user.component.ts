@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { User } from '../models/User';
-import { UserService } from '../services/user.service';
+import { User } from '../../models/User';
+import { UserService } from '../../services/user.service';
 import {FormControl} from "@angular/forms";
 
 @Component({

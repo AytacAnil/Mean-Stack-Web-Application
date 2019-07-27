@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MailService} from "../services/mail.service";
-import {Message} from "../models/Message";
+import {MailService} from "../../services/mail.service";
+import {Message} from "../../models/Message";
 import {Router} from "@angular/router";
 import {Sort} from "@angular/material/sort"
 
