@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User } from '../models/User'
-import { Session } from "../models/Session";
+import { User } from '../models/User';
+import { Session } from '../models/Session';
 import 'rxjs/add/operator/map';
 
 
