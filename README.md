@@ -8,9 +8,16 @@ Users must authenticate to use the application on the client side. There are two
 Admin can add, update, delete users and can see all the users in the database.
 Admin and regular users can send message, read inbox and outbox.
 
-Server side listens at port 3000 and Client side is at port 4200.
+Server side listens at port 3000 and Client side is at port 4200 by default.
 
-------------------------------------------------------------------------------------------------------------------------
-default admin for login:
-	username= admin
-	password= 1357
+### Install dependencies:
+Navigate to server `npm install Server`\
+Navigate to client `npm install Client`
+
+### Run:
+Navigate to server `node app.js`\
+Navigate to client `ng serve`
+
+### Default admin for login:
+username= admin
+password= 1357
