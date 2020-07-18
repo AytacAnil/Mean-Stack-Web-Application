@@ -10,9 +10,13 @@ Admin and regular users can send message, read inbox and outbox.
 
 Server side listens at port 3000 and Client side is at port 4200 by default.
 
+### Prerequisites:
+Node, Angular Cli\
+MongoDB with database named 'test'
+
 ### Install dependencies:
-Navigate to server `npm install Server`\
-Navigate to client `npm install Client`
+Navigate to server `npm install`\
+Navigate to client `npm install`
 
 ### Run:
 Navigate to server `node app.js`\
